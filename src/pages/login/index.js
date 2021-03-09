@@ -3,13 +3,41 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
 import { useEffect } from "react";
+import { getLCP, getFID, getCLS } from "web-vitals";
 import ReactGA from "react-ga";
 function Login(props) {
 
     useEffect(() => {
+       
+        console.log(window)
+        getCLS(sendToGoogleAnalytics);
+        getFID(sendToGoogleAnalytics);
+        getLCP(sendToGoogleAnalytics);
+        getCLS(sendToAnalytics);
+        getFID(sendToAnalytics);
+        getLCP(sendToAnalytics);
         ReactGA.initialize("UA-191680881-1");
         ReactGA.pageview(window.location.pathname + window.location.search);
       }, []);
+
+    function sendToAnalytics(metric) {
+    console.log(navigator.sendBeacon);
+    const body = JSON.stringify({[metric.name]: metric.value});
+        // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+        (navigator.sendBeacon && navigator.sendBeacon('https://www.google-analytics.com/analytics.js', body)) ||
+            fetch('https://www.google-analytics.com/analytics.js', {body, method: 'POST', keepalive: true});
+      }
+      function sendToGoogleAnalytics({ name, delta, id }) {
+     console.log(name, delta, id)
+        window.ga("send", "event", {
+          eventCategory: "Web Vitals",
+          eventAction: name,
+          eventLabel: id,
+          eventValue: Math.round(name === "CLS" ? delta * 1000 : delta),
+          nonInteraction: true,
+          transport: "beacon",
+        });
+      }
   return (
     <div style={{height:'100vh',backgroundColor:'black'}}>
       <Helmet>

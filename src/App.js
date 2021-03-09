@@ -14,15 +14,17 @@ function App() {
         image={undefined}
       ></HelmetMetaData> */}
       <Helmet>
+        <meta name="title" content="React Helmet Tutorial" />
         <meta name="description" content="Tutorial for React Helmet" />
         <meta name="theme-color" content="#0000" />
-        <meta property="og:site_name" content="CampersTribe" />
+        <meta property="og:site_name" content="social-share-app" />
         <meta
           property="url"
           content="https://social-share-app.herokuapp.com/"
         />
-        <meta name="description" content="Nested component"></meta>
-        <title>React Helmet Tutorial</title>
+        {/* <meta name="description" content="home page"></meta> */}
+        {/* <meta name="description" content="Nested component"></meta> */}
+        {/* <title>React Helmet Tutorial</title> */}
         <link rel="canonical" href="https://social-share-app.herokuapp.com/" />
       </Helmet>
       <div
@@ -34,8 +36,9 @@ function App() {
       >
         <LinkedinShareButton
           url={"https://social-share-app.herokuapp.com/"}
-          title={"CampersTribe - World is yours to explore"}
+          title="CampersTribe - World is yours to explore"
           hashtag="#camperstribe"
+
           //  className={classes.socialMediaButton}
         >
           <LinkedinIcon size={32} />

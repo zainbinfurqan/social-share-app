@@ -1,28 +1,31 @@
 import logo from "./logo.svg";
 import "./App.css";
 import HelmetMetaData from "./lib-components/helmet";
-import { LinkedinShareButton ,LineIcon} from "react-share";
+import { LinkedinShareButton ,LinkedinIcon} from "react-share";
 
 function App() {
   return (
-    <div className="App" style={{
-      backgroundColor:'black',
-      height:'100vh'
-    }}>
-      <HelmetMetaData
+    <>
+    <HelmetMetaData
         title={undefined}
         description={undefined}
         image={undefined}
       ></HelmetMetaData>
+    <div className="App" style={{
+      backgroundColor:'black',
+      height:'100vh'
+    }}>
+      
       <LinkedinShareButton
         url={"https://social-share-app.herokuapp.com/"}
         title={"CampersTribe - World is yours to explore"}
         hashtag="#camperstribe"
         //  className={classes.socialMediaButton}
       >
-        <LineIcon size={32}/>
+        <LinkedinIcon size={32}/>
       </LinkedinShareButton>
     </div>
+    </>
   );
 }
 

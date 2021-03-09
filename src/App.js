@@ -15,7 +15,7 @@ function App() {
         image={undefined}
       ></HelmetMetaData>
       <LinkedinShareButton
-        url={"https://www.ztfloor.com/"}
+        url={"https://social-share-app.herokuapp.com/"}
         title={"CampersTribe - World is yours to explore"}
         hashtag="#camperstribe"
         //  className={classes.socialMediaButton}

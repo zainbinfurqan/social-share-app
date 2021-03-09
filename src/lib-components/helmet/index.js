@@ -7,7 +7,7 @@ export default function HelmetMetaData(props) {
   console.log(props.title)
   console.log(props.description)
   console.log(props.image)
-  let currentUrl = "https://www.ztfloor.com/";
+  let currentUrl = "https://social-share-app.herokuapp.com/";
   let quote = props.quote !== undefined ? props.quote : "";
   let title =
     props.title !== undefined

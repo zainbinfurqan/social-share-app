@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
 
@@ -11,6 +12,11 @@ function About(props) {
         <meta name="theme-color" content="#008f68" />
       </Helmet>
       <h2 style={{ color: "white", margin: "0px" }}>About</h2>
+      <div>
+        <Link to="/login">Login</Link>
+        <Link to="/registration">Registration</Link>
+        <Link to="/home">Home</Link>
+      </div>
       <LinkedinShareButton
         url="https://social-share-app.herokuapp.com/about"
         title="CampersTribe - World is yours to explore"

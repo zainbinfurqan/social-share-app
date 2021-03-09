@@ -27,9 +27,11 @@ function App() {
           <meta name="theme-color" content="#008f68" />
         </Helmet>
         <LinkedinShareButton
-          url={"https://social-share-app.herokuapp.com"}
+          // url="https://social-share-app.herokuapp.com"
           title="CampersTribe - World is yours to explore"
-          hashtag="#camperstribe"
+          summary="CampersTribe - World is yours to explore"
+          // hashtag="#camperstribe"
+          source="https://social-share-app.herokuapp.com"
 
           //  className={classes.socialMediaButton}
         >

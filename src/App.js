@@ -13,20 +13,7 @@ function App() {
         description={undefined}
         image={undefined}
       ></HelmetMetaData> */}
-      <Helmet>
-        <meta name="title" content="React Helmet Tutorial" />
-        <meta name="description" content="Tutorial for React Helmet" />
-        <meta name="theme-color" content="#0000" />
-        <meta property="og:site_name" content="social-share-app" />
-        <meta
-          property="url"
-          content="https://social-share-app.herokuapp.com/"
-        />
-        {/* <meta name="description" content="home page"></meta> */}
-        {/* <meta name="description" content="Nested component"></meta> */}
-        {/* <title>React Helmet Tutorial</title> */}
-        <link rel="canonical" href="https://social-share-app.herokuapp.com/" />
-      </Helmet>
+      
       <div
         className="App"
         style={{
@@ -34,8 +21,13 @@ function App() {
           height: "100vh",
         }}
       >
+        <Helmet>
+          <title>Turbo Todo</title>
+          <meta name="description" content="Todos!" />
+          <meta name="theme-color" content="#008f68" />
+        </Helmet>
         <LinkedinShareButton
-          url={"https://social-share-app.herokuapp.com/"}
+          url={"https://social-share-app.herokuapp.com"}
           title="CampersTribe - World is yours to explore"
           hashtag="#camperstribe"
 

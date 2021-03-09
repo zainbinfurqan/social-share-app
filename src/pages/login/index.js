@@ -2,8 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
-
+import { useEffect } from "react";
+import ReactGA from "react-ga";
 function Login(props) {
+
+    useEffect(() => {
+        ReactGA.initialize("UA-191680881-1");
+        ReactGA.pageview(window.location.pathname + window.location.search);
+      }, []);
   return (
     <div style={{height:'100vh',backgroundColor:'black'}}>
       <Helmet>

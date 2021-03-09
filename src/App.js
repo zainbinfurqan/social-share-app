@@ -15,7 +15,6 @@ import ReactGA from "react-ga";
 
 function App() {
   useEffect(() => {
-    console.log(window.ga)
     getCLS(sendToGoogleAnalytics);
     getFID(sendToGoogleAnalytics);
     getLCP(sendToGoogleAnalytics);
@@ -27,18 +26,17 @@ function App() {
   }, []);
 
   function sendToAnalytics(metric) {
-    const body = JSON.stringify({[metric.name]: metric.value});
+    console.log(navigator.sendBeacon);
+    const body = JSON.stringify({ [metric.name]: metric.value });
     // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
-    (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
-        fetch('/analytics', {body, method: 'POST', keepalive: true});
+    (navigator.sendBeacon && navigator.sendBeacon("https://www.google-analytics.com/analytics", body)) ||
+      fetch("https://www.google-analytics.com/analytics", { body, method: "POST", keepalive: true });
   }
-  
- 
 
   function sendToGoogleAnalytics({ name, delta, id }) {
     // Assumes the global `ga()` function exists, see:
     // https://developers.google.com/analytics/devguides/collection/analyticsjs
- console.log(name, delta, id)
+    console.log(name, delta, id);
     window.ga("send", "event", {
       eventCategory: "Web Vitals",
       eventAction: name,

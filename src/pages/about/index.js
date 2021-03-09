@@ -25,8 +25,8 @@ function About(props) {
     console.log(navigator.sendBeacon);
     const body = JSON.stringify({[metric.name]: metric.value});
         // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
-        (navigator.sendBeacon && navigator.sendBeacon('https://www.google-analytics.com/analytics', body)) ||
-            fetch('https://www.google-analytics.com/analytics', {body, method: 'POST', keepalive: true});
+        (navigator.sendBeacon && navigator.sendBeacon('https://www.google-analytics.com/analytics.js', body)) ||
+            fetch('https://www.google-analytics.com/analytics.js', {body, method: 'POST', keepalive: true});
       }
       
      

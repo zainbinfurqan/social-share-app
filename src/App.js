@@ -4,40 +4,35 @@ import "./App.css";
 import { LinkedinShareButton, LinkedinIcon } from "react-share";
 // import SEO from './components/seo'
 import { Helmet } from "react-helmet";
+import { BrowserRouter as Router,
+  Switch,
+  Route,
+ } from "react-router-dom";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Login from "./pages/login";
+import Registration from "./pages/registration";
 
 function App() {
   return (
-    <>
-      {/* <HelmetMetaData
-        title={undefined}
-        description={undefined}
-        image={undefined}
-      ></HelmetMetaData> */}
-      
-      <div
-        className="App"
-        style={{
-          backgroundColor: "black",
-          height: "100vh",
-        }}
-      >
-        <Helmet>
-          <title>Turbo Todo</title>
-          <meta name="description" content="Todos!" />
-          <meta name="theme-color" content="#008f68" />
-        </Helmet>
-        <LinkedinShareButton
-          // source="https://social-share-app.herokuapp.com"
+      <Router>
+        <Switch>
+          <Route path='/home' component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/login' component={Login} />
+          <Route path='/registration' component={Registration} />
+          <Route path='/' component={Home} />
+        </Switch>
+          {/* <LinkedinShareButton
           url="https://social-share-app.herokuapp.com"
           title="CampersTribe - World is yours to explore"
           summary="CampersTribe - World is yours to explore"
-
-          //  className={classes.socialMediaButton}
         >
           <LinkedinIcon size={32} />
-        </LinkedinShareButton>
-      </div>
-    </>
+        </LinkedinShareButton> */}
+      </Router>
+       
+      
   );
 }
 

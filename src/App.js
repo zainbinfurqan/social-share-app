@@ -11,12 +11,14 @@ import Login from "./pages/login";
 import Registration from "./pages/registration";
 // import { getLCP, getFID, getCLS } from "web-vitals";
 import { useEffect } from "react";
-// import ReactGA from "react-ga";
+import ReactGA from "react-ga";
 // import {  googleAnalyticsActions} from './utils/google-analytics/google-analytics-init'
 // import { webVitalActions} from './utils/google-analytics/google-analytics-get-web-vitals'
-
+ReactGA.initialize("UA-191797355-1");
+ReactGA.pageview(window.location.pathname + window.location.search);
 function App() {
 
+  
   return (
     <Router>
       <Switch>

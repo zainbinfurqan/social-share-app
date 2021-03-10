@@ -20,13 +20,42 @@ function Login(props) {
         <meta name="description" content="Login" />
         <meta name="theme-color" content="#008f68" />
       </Helmet>
-      <h2 style={{ color: "white", margin:'0px', textAlign:'center' }}>Login</h2>
-      <div style={{
-            height: '50px'
-      }}>
-        <Link className='link-href' to="/registration">Registration</Link>
-        <Link className='link-href'  to="/home">Home</Link>
-        <Link className='link-href'  to="/about">About</Link>
+      <h2 style={{ color: "white", margin: "0px", textAlign: "center" }}>
+        Login
+      </h2>
+      <div
+        style={{
+          display: "flex",
+          height: "50px",
+        }}
+      >
+        <div
+          style={{
+            alignSelf: "center",
+          }}
+        >
+          <Link className="link-href" to="/registration">
+            Registration
+          </Link>
+        </div>
+        <div
+          style={{
+            alignSelf: "center",
+          }}
+        >
+          <Link className="link-href" to="/about">
+            About
+          </Link>
+        </div>
+        <div
+          style={{
+            alignSelf: "center",
+          }}
+        >
+          <Link className="link-href" to="/home">
+            Home
+          </Link>
+        </div>
       </div>
       <LinkedinShareButton
         url="https://social-share-app.herokuapp.com/login"

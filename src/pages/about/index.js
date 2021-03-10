@@ -8,9 +8,8 @@ import { webVitalActions } from "../../utils/google-analytics/google-analytics-g
 
 function About(props) {
   useEffect(() => {
-    console.log("useEffect login");
-    webVitalActions.sendDataToAnalytics("login");
-    webVitalActions.sendDataToGAForWebVitalsReport("login");
+    webVitalActions.sendDataToAnalytics("about");
+    webVitalActions.sendDataToGAForWebVitalsReport("about");
     googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
   }, []);
 

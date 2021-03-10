@@ -7,9 +7,8 @@ import { googleAnalyticsActions } from "../../utils/google-analytics/google-anal
 import { webVitalActions } from "../../utils/google-analytics/google-analytics-get-web-vitals";
 function Registration(props) {
   useEffect(() => {
-    console.log("useEffect login");
-    webVitalActions.sendDataToAnalytics("login");
-    webVitalActions.sendDataToGAForWebVitalsReport("login");
+    webVitalActions.sendDataToAnalytics("registration");
+    webVitalActions.sendDataToGAForWebVitalsReport("registration");
     googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
   }, []);
 

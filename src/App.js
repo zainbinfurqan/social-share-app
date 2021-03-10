@@ -16,18 +16,6 @@ import { useEffect } from "react";
 // import { webVitalActions} from './utils/google-analytics/google-analytics-get-web-vitals'
 
 function App() {
-  useEffect(() => {
-    // getCLS(webVitalActions.googleAnalyticsGetWebVitals);
-    // getFID(webVitalActions.googleAnalyticsGetWebVitals);
-    // getLCP(webVitalActions.googleAnalyticsGetWebVitals);
-    // getCLS(webVitalActions.sendDataToAnalytics);
-    // getFID(webVitalActions.sendDataToAnalytics);
-    // getLCP(webVitalActions.sendDataToAnalytics);
-    // webVitalActions.googleAnalyticsGetWebVitals()
-    // googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1")
-  }, []);
-
- 
 
   return (
     <Router>

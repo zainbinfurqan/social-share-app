@@ -9,6 +9,7 @@ import { webVitalActions } from "../../utils/google-analytics/google-analytics-g
 function About(props) {
   useEffect(() => {
     webVitalActions.sendDataToAnalytics("about");
+    webVitalActions.googleAnalyticsGetWebVitals("login");
     webVitalActions.sendDataToGAForWebVitalsReport("about");
     googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
   }, []);
@@ -20,19 +21,30 @@ function About(props) {
         <meta name="description" content="About" />
         <meta name="theme-color" content="#008f68" />
       </Helmet>
-      <h2 style={{ color: "white",margin:'0px', textAlign:'center' }}>About</h2>
-      <div  style={{
-            height: '50px'
-      }}>
-        <Link className="link-href" to="/login">
-          Login
-        </Link>
-        <Link className="link-href" to="/registration">
-          Registration
-        </Link>
-        <Link className="link-href" to="/home">
-          Home
-        </Link>
+      <h2 style={{ color: "white", margin: "0px", textAlign: "center" }}>
+        About
+      </h2>
+      <div
+        style={{
+          display: "flex",
+          height: "50px",
+        }}
+      >
+        <div
+          style={{
+            alignSelf: "center",
+          }}
+        >
+          <Link className="link-href" to="/login">
+            Login
+          </Link>
+          <Link className="link-href" to="/registration">
+            Registration
+          </Link>
+          <Link className="link-href" to="/home">
+            Home
+          </Link>
+        </div>
       </div>
       <LinkedinShareButton
         url="https://social-share-app.herokuapp.com/about"

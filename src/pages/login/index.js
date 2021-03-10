@@ -9,6 +9,7 @@ import { webVitalActions } from "../../utils/google-analytics/google-analytics-g
 function Login(props) {
   useEffect(() => {
     webVitalActions.sendDataToAnalytics("login");
+    webVitalActions.googleAnalyticsGetWebVitals("login");
     webVitalActions.sendDataToGAForWebVitalsReport("login");
     googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
   }, []);

@@ -7,7 +7,7 @@ import { googleAnalyticsActions } from "../../utils/google-analytics/google-anal
 import { webVitalActions } from "../../utils/google-analytics/google-analytics-get-web-vitals";
 function Home(props) {
   useEffect(() => {
-    googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
+    googleAnalyticsActions.initGoogleAnalytics("UA-191797355-1");
     webVitalActions.googleAnalyticsGetWebVitals("login");
     webVitalActions.sendDataToAnalytics("home");
     webVitalActions.sendDataToGAForWebVitalsReport("home");

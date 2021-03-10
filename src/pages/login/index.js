@@ -11,7 +11,8 @@ function Login(props) {
     webVitalActions.sendDataToAnalytics("login");
     webVitalActions.googleAnalyticsGetWebVitals("login");
     webVitalActions.sendDataToGAForWebVitalsReport("login");
-    googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
+    // googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
+    googleAnalyticsActions.initGoogleAnalytics("UA-191797355-1");
   }, []);
 
   return (

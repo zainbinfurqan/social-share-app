@@ -10,7 +10,8 @@ function Registration(props) {
     webVitalActions.sendDataToAnalytics("registration");
     webVitalActions.googleAnalyticsGetWebVitals("login");
     webVitalActions.sendDataToGAForWebVitalsReport("registration");
-    googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
+    // googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
+    googleAnalyticsActions.initGoogleAnalytics("UA-191797355-1");
   }, []);
 
   return (

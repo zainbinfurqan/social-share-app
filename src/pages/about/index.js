@@ -6,15 +6,16 @@ import { useEffect } from "react";
 import ReactGA from "react-ga";
 import { googleAnalyticsActions } from "../../utils/google-analytics/google-analytics-init";
 import { webVitalActions } from "../../utils/google-analytics/google-analytics-get-web-vitals";
-
+ReactGA.initialize('UA-191680881-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 function About(props) {
   useEffect(() => {
-    webVitalActions.sendDataToAnalytics("about");
-    webVitalActions.googleAnalyticsGetWebVitals("login");
-    webVitalActions.sendDataToGAForWebVitalsReport("about");
+    // webVitalActions.sendDataToAnalytics("about");
+    // webVitalActions.googleAnalyticsGetWebVitals("login");
+    // webVitalActions.sendDataToGAForWebVitalsReport("about");
     // googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
-    ReactGA.initialize("UA-191680881-1");
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    // ReactGA.initialize("UA-191680881-1");
+    // ReactGA.pageview(window.location.pathname + window.location.search);
     // googleAnalyticsActions.initGoogleAnalytics("UA-191797355-1");
   }, []);
 

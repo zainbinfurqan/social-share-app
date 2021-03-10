@@ -4,7 +4,8 @@ const googleAnalyticsActions = {};
 
 googleAnalyticsActions.initGoogleAnalytics = async (key) => {
   ReactGA.initialize(key);
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  console.log(window.location.pathname)
+  ReactGA.pageview(window.location.pathname);
 };
 
 export { googleAnalyticsActions };

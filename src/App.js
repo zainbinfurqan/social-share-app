@@ -6,8 +6,8 @@ import About from "./pages/about";
 import Login from "./pages/login";
 import Registration from "./pages/registration";
 import ReactGA from "react-ga";
-ReactGA.initialize("UA-191680881-1");
-ReactGA.pageview(window.location.pathname + window.location.search);
+// ReactGA.initialize("UA-191680881-1");
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   return (

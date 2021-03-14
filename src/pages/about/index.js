@@ -5,21 +5,14 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import ReactGA from "react-ga";
 import { googleAnalyticsActions } from "../../utils/google-analytics/google-analytics-init";
-// import { webVitalActions } from "../../utils/google-analytics/google-analytics-get-web-vitals";
+import { webVitalActions } from "../../utils/google-analytics/google-analytics-get-web-vitals";
 
 function About(props) {
   useEffect(() => {
-    // console.log("About");
-    // ReactGA.initialize("UA-191680881-1");
-    // ReactGA.pageview(window.location.pathname + window.location.search);
-    // console.log(window.location.pathname);
-    // console.log(window.location.search);
     // webVitalActions.googleAnalyticsGetWebVitals("login");
+    webVitalActions.sendDataToAnalytics("about");
     // webVitalActions.sendDataToGAForWebVitalsReport("about");
     googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
-    // ReactGA.initialize("UA-191680881-1");
-    // ReactGA.pageview(window.location.pathname + window.location.search);
-    // googleAnalyticsActions.initGoogleAnalytics("UA-191797355-1");
   }, []);
 
   return (

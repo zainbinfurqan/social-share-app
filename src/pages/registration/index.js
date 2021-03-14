@@ -5,23 +5,15 @@ import { useEffect } from "react";
 // import { LinkedinShareButton, LinkedinIcon } from "react-share";
 import { googleAnalyticsActions } from "../../utils/google-analytics/google-analytics-init";
 import ReactGA from "react-ga";
-// import { webVitalActions } from "../../utils/google-analytics/google-analytics-get-web-vitals";
+import { webVitalActions } from "../../utils/google-analytics/google-analytics-get-web-vitals";
 // ReactGA.initialize("UA-191680881-1");
 // ReactGA.pageview(window.location.pathname + window.location.search);
 function Registration(props) {
   useEffect(() => {
-    // console.log("Registration");
-    // ReactGA.initialize("UA-191680881-1");
-    // ReactGA.pageview(window.location.pathname + window.location.search);
-    // console.log(window.location.pathname);
-    // console.log(window.location.search);
-    // webVitalActions.sendDataToAnalytics("registration");
+    webVitalActions.sendDataToAnalytics("registration");
     // webVitalActions.googleAnalyticsGetWebVitals("login");
     // webVitalActions.sendDataToGAForWebVitalsReport("registration");
     googleAnalyticsActions.initGoogleAnalytics("UA-191680881-1");
-    // googleAnalyticsActions.initGoogleAnalytics("UA-191797355-1");
-    // ReactGA.initialize("UA-191680881-1");
-    // ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
   return (

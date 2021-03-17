@@ -11,18 +11,20 @@ import "./App.css";
 // import Registration from "./pages/registration";
 // import { getLCP, getFID, getCLS } from "web-vitals";
 import { useEffect } from "react";
+import {googleTimeApiMethods} from './utils/google-utils-files/google-time-api'
 // import {  googleAnalyticsActions} from './utils/google-analytics/google-analytics-init'
 // import { webVitalActions} from './utils/google-analytics/google-analytics-get-web-vitals'
 import ReactGA from "react-ga";
 ReactGA.initialize("UA-191680881-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 function App() {
-  // useEffect(() => {
+  useEffect(() => {
+    googleTimeApiMethods.getLocalTimeZone()
     // ReactGA.initialize("UA-191797355-1");
     // ReactGA.pageview(window.location.pathname + window.location.search);
     // ReactGA.initialize("UA-191680881-1");
     // ReactGA.pageview(window.location.pathname + window.location.search);
-  // }, []);
+  }, []);
 
   return (
     <div className="App">

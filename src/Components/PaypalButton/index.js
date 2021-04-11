@@ -60,7 +60,7 @@ function PayPalButton(props) {
         </div>
     );
 }
-const KEY = 'AQ9FVMtkZKvCdLl5S2Kywq3PM-1JjPSShyYz7zFqQsmk2eftbGMh2w9YfoAdn9CLpxSMdA9TAzWC2jKh'
+const KEY = ''
 const disableCard = 'mastercard,amex,visa,discover,jcb,elo,hiper'
 const disableFunding = 'credit,bancontact,blik,eps,giropay,ideal,mercadopago,mybank,p24,sepa,sofort,venmo,card'
 
